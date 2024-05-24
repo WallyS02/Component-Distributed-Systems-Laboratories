@@ -1,0 +1,5 @@
+LIBRARY 4.dll
+
+EXPORTS
+	DllGetClassObject PRIVATE
+	DllCanUnloadNow PRIVATE

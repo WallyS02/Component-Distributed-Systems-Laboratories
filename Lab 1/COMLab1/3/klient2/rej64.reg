@@ -1,0 +1,8 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Classes\Wow6432Node\CLSID\{4F247A8D-0B03-445F-8C85-9AABC29C46C8}]
+@="Klasa"
+
+[HKEY_CURRENT_USER\Software\Classes\Wow6432Node\CLSID\{4F247A8D-0B03-445F-8C85-9AABC29C46C8}\InProcServer32]
+@="C:\\Users\\Ja\\Downloads\\KSR\\Lab\\Lab 1\\COMLab1\\3\\klient2\\serwerInProc2.dll"
+"ThreadingModel"="Both"

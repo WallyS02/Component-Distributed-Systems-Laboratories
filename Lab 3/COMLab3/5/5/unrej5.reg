@@ -1,0 +1,15 @@
+REGEDIT4
+
+[-HKEY_CURRENT_USER\Software\Classes\dostawca.komponent.wersja]
+
+[-HKEY_CURRENT_USER\Software\Classes\dostawca.komponent.wersja\CLSID]
+
+[-HKEY_CURRENT_USER\Software\Classes\CLSID\{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}]
+
+[-HKEY_CURRENT_USER\Software\Classes\WOW6432Node\CLSID\{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}\InprocServer32]
+
+[-HKEY_CURRENT_USER\Software\Classes\WOW6432Node\CLSID\{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}\InprocServer32\0.0.0.0]
+
+[-HKEY_CURRENT_USER\Software\Classes\CLSID\{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}\ProgId]
+
+[-HKEY_CURRENT_USER\Software\Classes\CLSID\{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]

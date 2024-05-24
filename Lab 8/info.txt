@@ -1,0 +1,50 @@
+host: 153.19.51.136
+virtual host: vh<index>
+user: <index>
+hasło: ke2pemurtb8a
+adres: rabbitmq://<host>/<virtual host>
+
+1. wydawca (W)				20%
+publikuje przynajmniej 10 wiadomości typu
+Temperatura z temperaturą typu całkowitego;
+wartości temperatury powinny być losowe
+z rozsądnego przedziału
+
+2. odbiorca (A)				15%
+prenumeruje Temperaturę wypisuje na konsolę
+zawartość odebranych wiadomości
+
+3. nagółwki				10%
+W dodatkowo ustawia dwa nagłówki w każdej
+wiadomości:
+miejsce - losowo:
+          "Gdansk", "Gdynia" lub "Sopot"
+skala   - losowo: C lub F
+          (skala Celsjusza lub Fahrenheita)
+
+A dodatkowo wypisuje miejsce i zamienia
+skalę Fahrenheita na skalę Celsjusza
+C = 5/9 * (F - 32)
+
+4. drugi odbiorca (B)			15%
+wypisuje na konsolę treść odebranych
+wiadomości i ich nagłówki; nie zamienia skali;
+numeruje wypisane wiadomości; licznik musi być
+polem klasy obsługującej wiadomości i nie może
+być statyczny
+
+5. trzeci odbiorca (C)			20%
+W publikuje dodatkowo przynajmniej 10 wiadomości
+typu Cisnienie z ciśnieniem typu całkowitego, bez
+nagłówków; C wypisuje ich zawartość na konsolę;
+wszystkie wiadomości muszą być interfejsami
+
+6. wersjonowanie			20%
+W publikuje dodatkowo przynajmniej 10 wiadomości
+typu TempICisn dziedziczących po Temperaturze
+i Cisnieniu; wiadomości te zawierają takie
+same nagłówki jak Temperatura;
+wiadomości te prenumeruje B (zamiast Temperatury)
+i wypisuje ich zawartość;
+A i C powinny odbierać odpowiadające im fragmenty
+TempICisn

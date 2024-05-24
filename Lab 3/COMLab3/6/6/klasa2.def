@@ -1,0 +1,5 @@
+LIBRARY 6.dll
+
+EXPORTS
+	DllGetClassObject PRIVATE
+	DllCanUnloadNow PRIVATE

@@ -1,0 +1,39 @@
+Proszê zaimplementowaæ i uruchomiæ w emulatorze Azure
+serwer WCF oferuj¹cy u¿ytkownikom przechowywanie plików.
+Ka¿dy u¿ytkownik powinien mieæ osobny zbiór plików
+(dwoje u¿ytkowników mo¿e mieæ pliki o takiej samej nazwie
+i nie powinny byæ one pomylone) i zbiór ten powinien
+byæ trwa³y -- wylogowanie nie powinno powodowaæ utraty plików.
+Po wylogowaniu funkcje Put i Get, dla nieaktualnego ju¿ idsesji
+nie powinny dodawaæ/zwracaæ plików z/do zbiorów u¿ytkownika.
+
+Uruchamiany projekt: Visual C# -> Cloud -> Us³uga w chmurze platformy Azure (dodajemy rola us³ugi sieci Web WCF).
+
+Metody serwisu:
+ - Create(login, has³o)					20%
+   tworzy u¿ytkownika
+ - Login(login, has³o)					20%
+   sprawdza, czy u¿ytkownik istnieje i ma dane has³o;
+   je¿eli tak, tworzy sesjê o nowym identyfikatorze
+   (Guid.NewGuid()) i zwraca ten identyfikator
+ - Logout(login)					10%
+   usuwa sesjê dla danego u¿ytkownika
+ - Put(nazwa, tresc(string), idsesji)			30%
+   tworzy plik (BLOB) o podanej nazwe i podanej treœci,
+   o ile idsesji jest poprawne (istnieje sesja z danym
+   identyfikatorem)
+ - Get(nazwa, idsesji) -> string			20%
+   pobiera zawartoœæ pliku o podanej nazwie,
+   o ile idsesji jest poprawne; plik pobierany jest
+   ze zbioru u¿ytkownika, który utworzy³ dan¹ sesjê
+
+Dane u¿ytkowników i sesji proszê trzymaæ w tabelach.
+Dane plików proszê trzymaæ w BLOBach.
+
+Uwagi:
+Po zakoñczeniu zadania proszê przes³aæ wszystkie pliki kodu, konfiguracyjne (.cs, .config)
+oraz pliki wszytkich projektów i solution (pliki .csproj i .sln).
+Podstaw¹ oceny s¹ równie¿ screeny z dzia³aj¹cych programów.
+Proszê opró¿niæ foldery Debug i Release zostawiaj¹c jedynie pliki .exe i .dll.
+Proszê równie¿ usun¹æ folder packages oraz ukryty folder .vs.
+Pliki nale¿y spakowaæ do archiwum ZIP i wys³aæ na platformie e-nauczanie.
