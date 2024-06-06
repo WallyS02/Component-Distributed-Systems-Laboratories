@@ -1,0 +1,16 @@
+Odpalenie RabbitMQ
+docker run -d --name rabbitmq -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+
+Odpalenie Web
+cd "ścieżka\do\dockerfile"
+docker build -t wallys02/libraryweb .
+docker run -d -p 90:90 --name libraryweb -e LibraryWebApiServiceHost=http://host.docker.internal:91 wallys02/libraryweb
+
+Odpalenie WebApi
+cd "ścieżka\do\dockerfile"
+docker build -t wallys02/librarywebapi .
+docker run -d -p 91:91 --name librarywebapi wallys02/librarywebapi
+
+Odpalenie docker-compose:
+docker compose build
+docker compose up

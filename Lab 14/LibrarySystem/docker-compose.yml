@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  library-web-api:
+    build: Library.WebApi/.
+    image: wallys02/librarywebapi
+    ports:
+      - "91:91"
+    depends_on:
+      - rabbitmq
+
+  library-notification-service-2:
+    build: Library.NotificationService2/.
+    image: wallys02/notificationservice2
+    ports:
+      - "92:80"
+    depends_on:
+      - rabbitmq
+
+  library-web:
+    build: Library.Web/.
+    image: wallys02/libraryweb
+    ports:
+      - "90:90"
+    environment:
+      - LibraryWebApiServiceHost=http://library-web-api:91
+    depends_on:
+      - library-web-api
+      - library-notification-service-2
